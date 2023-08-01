@@ -18,7 +18,7 @@ class PosServiceProvider extends PackageServiceProvider
         $package
             ->name('pos')
             ->hasConfigFile()
-            ->hasViews()
+            ->hasViews(namespace: 'rickodev')
             ->hasMigration('create_pos_table')
             ->hasCommand(PosCommand::class);
     }

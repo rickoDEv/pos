@@ -2,9 +2,9 @@
 
 namespace Rickodev\Pos;
 
+use Rickodev\Pos\Commands\PosCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Rickodev\Pos\Commands\PosCommand;
 
 class PosServiceProvider extends PackageServiceProvider
 {

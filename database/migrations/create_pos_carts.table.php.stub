@@ -8,11 +8,9 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('pos_table', function (Blueprint $table) {
+        Schema::create('pos_carts', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->foreignIdFor(\App\Models\User::class)->nullable();
             $table->timestamps();
         });
     }

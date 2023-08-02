@@ -25,7 +25,7 @@ class PosServiceProvider extends PackageServiceProvider
 //            ->hasAssets()
             ->hasViews(namespace: 'rickodev')
             ->hasMigration('create_pos_carts_table')
-            ->hasInstallCommand(function(InstallCommand $command) {
+            ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
                     ->publishAssets()
@@ -50,13 +50,13 @@ class PosServiceProvider extends PackageServiceProvider
         }
 
         $this->publishes(paths: [
-            __DIR__ . '/../public/' => public_path('/'),
+            __DIR__.'/../public/' => public_path('/'),
         ], groups: 'pos-assets');
     }
 
     private function configureLivewireComponents()
     {
-        Livewire::component('rickodev::product-grid',ProductGrid::class);
-        Livewire::component('rickodev::cart',Cart::class);
+        Livewire::component('rickodev::product-grid', ProductGrid::class);
+        Livewire::component('rickodev::cart', Cart::class);
     }
 }

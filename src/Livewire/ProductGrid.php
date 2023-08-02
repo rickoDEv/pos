@@ -4,7 +4,6 @@ namespace Rickodev\Pos\Livewire;
 
 class ProductGrid extends \Livewire\Component
 {
-
     public $products = [];
 
     public function render()
@@ -13,5 +12,4 @@ class ProductGrid extends \Livewire\Component
         return view('rickodev::livewire.products-grid');
 
     }
-
 }
